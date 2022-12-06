@@ -69,7 +69,7 @@ def dijkstras_shortest_path(routers, src_ip, dest_ip):
     end[1] += "."
     end = ''.join(end)
     if start == end:
-        return None
+        return []
 
     else:
         to_visit = []
