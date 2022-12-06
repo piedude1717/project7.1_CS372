@@ -60,15 +60,21 @@ def dijkstras_shortest_path(routers, src_ip, dest_ip):
     shortest_path = []
     start = src_ip.split('.')
     start = start[0:3]
+    start_sub = start[0:2]
     start[0] += "."
     start[1] += "."
+    start_sub[0] += "."
     start = ''.join(start)
+    start_sub = ''.join(start_sub)
     end = dest_ip.split('.')
     end = end[0:3]
+    end_sub = end[0:2]
     end[0] += "."
-    end[1] += "."
+    end_sub[0] += "."
+    end_sub[1] += "."
     end = ''.join(end)
-    if start == end:
+    end_sub = ''.join(end_sub)
+    if start_sub == end_sub:
         return []
 
     else:
